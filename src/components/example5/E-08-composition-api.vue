@@ -11,6 +11,7 @@
 </template>
 
 <script>
+
 import { ref, computed, watch, onBeforeMount, onMounted, onBeforeUpdate, onUpdated, onBeforeUnmount, onUnmounted } from 'vue';
 
 export default {
@@ -22,7 +23,7 @@ export default {
       default: 'User Information'
     }
   },
-
+// computedAPI: script 처럼 사용. 자체적으로 로직을 짜서 사용가능. optionsAPI는 여러 공간에 코드가 나눠져 있지만 compositionAPI는 property를 제외한 로직을 전부 setup 함수에 넣어 내가 필요한 로직을 한눈에 볼 수 있음.
   setup(props) {
     // 반응형 상태 정의
     const firstName = ref('John');
@@ -75,7 +76,7 @@ export default {
     onUnmounted(() => {
       console.log('unmounted hook');
     });
-
+  // 리턴한것들만 위에서 쓸수 있음. template에서
     return {
       firstName,
       lastName,

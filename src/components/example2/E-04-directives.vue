@@ -36,6 +36,7 @@
 
       <div id = "div-1" v-if="count % 3 === 0"> count % 3 === 0</div>
       <div id = "div-2" v-else-if="count % 2 === 0"> count % 2 === 0</div>
+      <div id = "div-4" v-else-if="count % 5 === 0"> count % 5 === 0</div>
       <div id = "div-3" v-else>Count is not divisible by 2 or 3</div>
 
       <button @click="count++">Increment Count</button>

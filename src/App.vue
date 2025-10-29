@@ -1,17 +1,21 @@
 <!--E01Instance를 받아옴-->
 <template>
-  <E04Directives/>
+  <E11Reactive/>
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue';
 
 //E01Instance를 받아옴
-import E04Directives from "@/components/example2/E-04-directives.vue";
+
+import E11Reactive from "@/components/example6/E-11-reactive.vue";
 export default defineComponent({
   name: 'App',
   components: {
-    E04Directives
+    E11Reactive,
+
+
+
   }
 });
 </script>

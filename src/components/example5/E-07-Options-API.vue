@@ -11,16 +11,17 @@
 </template>
 
 <script>
+// 이렇게 키 방식으로(name, props, data,) 하는걸 options API라 부름.
 export default {
   name: 'E07OptionsApi',
-
+//props: ['title1'] 이런식으로 쓰기도 하고 아래처럼 딕셔너리 형태로 쓰기도 함.
   props: {
     title: {
       type: String,
       default: 'User Information'
     }
   },
-
+// 사용할변수들
   data() {
     return {
       firstName: 'John',
@@ -29,13 +30,13 @@ export default {
       message: ''
     };
   },
-
+//변수들을 조합해서 사용. 동적변수
   computed: {
     fullName() {
       return `${this.firstName} ${this.lastName}`;
     }
   },
-
+// 이 컴포넌트에서 사용할 함수들 정의
   methods: {
     greet() {
       this.greetCount++;
@@ -45,7 +46,7 @@ export default {
       this.greetCount = 0;
     }
   },
-
+// 계속 모니터링 하면서 확인
   watch: {
     greetCount(newValue, oldValue) {
       console.log(`Greet count changed from ${oldValue} to ${newValue}`);
@@ -54,7 +55,7 @@ export default {
       }
     }
   },
-
+// life style에 따른 시점 함수들.
   beforeCreate() {
     console.log('beforeCreate hook');
   },

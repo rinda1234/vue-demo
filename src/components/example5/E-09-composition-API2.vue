@@ -5,7 +5,7 @@ export default {
 </script>
 
 
-<script setup>
+<script setup> // 이렇게 script setup으로 적고 쓰면 setup함수를 일일히 적을필요 없이 한번에 적을 수 있음.
 import { ref, computed, watch, onBeforeMount, onMounted, onBeforeUpdate, onUpdated, onBeforeUnmount, onUnmounted, defineProps } from 'vue';
 
 // props 정의

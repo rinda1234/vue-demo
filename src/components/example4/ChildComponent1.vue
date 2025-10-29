@@ -16,7 +16,7 @@ import ChildComponent2 from "@/components/example4/ChildComponent2.vue";
 
 export default {
   components: {ChildComponent2},
-  inject: ['sharedMessage']
+  inject: ['sharedMessage']// inject를 이용해 부모의 변수를 받아옴.
 };
 </script>
 
